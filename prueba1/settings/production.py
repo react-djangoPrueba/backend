@@ -1,6 +1,6 @@
 from .settings import *
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-zj1$87yai!pwf9!u5oehzsh)a$(5ws&8tji0tp8%79x=1h6xc6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
