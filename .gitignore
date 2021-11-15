@@ -169,8 +169,8 @@ Thumbs.db
 .prof
 
 # Migrations
-.migrations/
-migrations/
+#.migrations/
+#migrations/
 
 # VS Code
 .vscode
