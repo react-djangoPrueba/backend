@@ -6,19 +6,19 @@ SECRET_KEY = ''
 DEBUG = False
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://backend-authql.herokuapp.com']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres',
-        'NAME': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db',
         'USER': '',
         'PASSWORD':'',
         'HOST':'',
-        'PORT':''
+        'PORT':5432
     }
 }
 EMAIL_BACKEEND = 'django.core.mail.backends.smtp.EmailBackend'
