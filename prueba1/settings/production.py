@@ -1,6 +1,6 @@
 from .settings import *
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-zj1$87yai!pwf9!u5oehzsh)a$(5ws&8tji0tp8%79x=1h6xc6'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -13,17 +13,17 @@ ALLOWED_HOSTS = ['backend-authql.herokuapp.com']
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'df29mffieflj4e',
-        'USER': 'lasaoiuqdxpdpv',
-        'PASSWORD':'cb9320b0ebaef0f48acce5c007ceeef12235140f0807d0674434a460dbfa0394',
-        'HOST':'ec2-23-23-199-57.compute-1.amazonaws.com',
+        'ENGINE': os.getenv('DB_ENGINE'),
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
         'PORT':5432
     }
 }
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'deliveryfoodpopayan@gmail.com'
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
