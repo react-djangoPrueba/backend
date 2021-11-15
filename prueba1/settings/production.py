@@ -6,7 +6,7 @@ SECRET_KEY = ''
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['https://backend-authql.herokuapp.com']
+ALLOWED_HOSTS = ['backend-authql.herokuapp.com']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -14,15 +14,17 @@ ALLOWED_HOSTS = ['https://backend-authql.herokuapp.com']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db',
-        'USER': '',
-        'PASSWORD':'',
-        'HOST':'',
+        'NAME': 'df29mffieflj4e',
+        'USER': 'lasaoiuqdxpdpv',
+        'PASSWORD':'cb9320b0ebaef0f48acce5c007ceeef12235140f0807d0674434a460dbfa0394',
+        'HOST':'ec2-23-23-199-57.compute-1.amazonaws.com',
         'PORT':5432
     }
 }
-EMAIL_BACKEEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = ''
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
+STATICFILES_DIRS = (BASE_DIR,'static')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'deliveryfoodpopayan@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_USER')
 EMAIL_USE_TLS = True
+EMAIL_PORT = 587
