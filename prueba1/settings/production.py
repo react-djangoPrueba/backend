@@ -6,7 +6,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['backend-authql.herokuapp.com']
+ALLOWED_HOSTS = ['backend-authql.herokuapp.com',
+'http://localhost:8080/', 'http://localhost:3000/','prueba-react-app.herokuapp.com']
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -22,8 +23,11 @@ DATABASES = {
     }
 }
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+MAILER_EMAIL_BACKEND = EMAIL_BACKEND  
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'deliveryfoodpopayan@gmail.com'
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True  
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

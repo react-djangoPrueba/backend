@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'api_graphql',
     "graphql_auth",
+    'corsheaders',
     # refresh tokens are optional
     #'graphql_jwt.refresh_token.apps.RefreshTokenConfig'
 ]
@@ -43,12 +44,15 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CORS_ALLOWED_ORIGINS = ["http://backend-authql.herokuapp.com",
+"http://localhost:8080", "http://localhost:3000","http://prueba-react-app.herokuapp.com","http://localhost:8000"]
 
 ROOT_URLCONF = 'prueba1.urls'
 
