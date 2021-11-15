@@ -21,7 +21,7 @@ DATABASES = {
         'PORT':5432
     }
 }
-STATICFILES_DIRS = (BASE_DIR,'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'deliveryfoodpopayan@gmail.com'
