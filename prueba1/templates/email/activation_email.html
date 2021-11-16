@@ -1,43 +1,24 @@
 
 <center>
-<style>
-		.jumbotron{
-            background-color: whitesmoke;
-            box-shadow: 1em 1em 1em 1em rgba(13, 13, 13, 0.2);
-            border-radius: 3em;
-            padding: 4em 1em ;
-            width: calc(30%);
-            height: calc(15%);
-        }
-        .lyrics{
-            font-family: Cursive,Fantasy;
-        }
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        button{
-            background-color: #0781e6;
-            transition-duration: 0.4s;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #42a0ed;
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        }
-</style>
-    <div class="jumbotron">
-        <h3 class="lyrics">Backend Auth</h3>
-        <p>Hola <strong class="lyrics">{{ user.first_name }}!</strong></p>
+    <div style="background-color: whitesmoke;
+                box-shadow: 1em 1em 1em 1em rgba(13, 13, 13, 0.2);
+                border-radius: 3em;
+                padding: 4em 1em ;
+                width: calc(30%);
+                height: calc(15%);">
+        <h3 style="font-family: Cursive,Fantasy;">Backend Auth</h3>
+        <p>Hola <strong style="font-family: Cursive,Fantasy;">{{ user.first_name }}!</strong></p>
         <p>Por favor activa tu cuenta en el siguiente link:</p>
         <div class="button">
-            <button>
-                <a href={{ protocol }}://{{ domain }}/{{ path }}/{{ token }}> Activa tu cuenta</a>
+            <button style="background-color: #0781e6;
+                        transition-duration: 0.4s;
+                        border: none;
+                        color: white;
+                        padding: 15px 32px;
+                        text-align: center;
+                        text-decoration: none;
+                        font-size: 16px;">
+                <a style="text-decoration: none; color: white;" href={{ protocol }}://{{ domain }}/{{ path }}/{{ token }}> Activa tu cuenta</a>
             </button>
         </div>
     </div>
