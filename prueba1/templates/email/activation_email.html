@@ -1,4 +1,3 @@
-
 <center>
     <div style="background-color: whitesmoke;
                 box-shadow: 1em 1em 1em 1em rgba(13, 13, 13, 0.2);
@@ -9,17 +8,18 @@
         <h3 style="font-family: Cursive,Fantasy;">Backend Auth</h3>
         <p>Hola <strong style="font-family: Cursive,Fantasy;">{{ user.first_name }}!</strong></p>
         <p>Por favor activa tu cuenta en el siguiente link:</p>
-        <div class="button">
-            <button style="background-color: #0781e6;
-                        transition-duration: 0.4s;
-                        border: none;
-                        color: white;
-                        padding: 15px 32px;
+        <a href={{ protocol }}://{{ domain }}/{{ path }}/{{ token }}
+            style="text-decoration: none;
+                background-color: #0781e6;
+                border-radius: 1em;
+                padding: 15px 32px;
+                font-size: 16px;" >
+                <span style="color: white;
                         text-align: center;
-                        text-decoration: none;
-                        font-size: 16px;">
-                <a style="text-decoration: none; color: white;" href={{ protocol }}://{{ domain }}/{{ path }}/{{ token }}> Activa tu cuenta</a>
-            </button>
-        </div>
+                        font-family: Cursive,Fantasy;
+                        ">
+                    Activa tu cuenta
+                </span>
+        </a>
     </div>
 </center>
